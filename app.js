@@ -10,6 +10,17 @@ app.use('/user', userRoute);
 app.use('/posts', postRoute);
 
 /**
+ * Route with Param
+ */
+
+app.get('/products/:prodId', (req, res) => {
+  console.log(req.params);
+  res.send(
+    '<h1>Single Product Page</h1> ' + '<h2>Product ID:</h2>' + req.params.prodId
+  );
+});
+
+/**
  * Main and 404 route
  */
 app.get('/', (req, res) => {
