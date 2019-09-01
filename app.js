@@ -14,7 +14,6 @@ app.use('/posts', postRoute);
  */
 
 app.get('/products/:prodId', (req, res) => {
-  console.log(req.params);
   res.send(
     '<h1>Single Product Page</h1> ' + '<h2>Product ID:</h2>' + req.params.prodId
   );
